@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="format-detection" content="telephone=no">
@@ -10,25 +10,147 @@
 <body class="loaded">
 
 <!-- BODY -->
-<div class="main-wrapper">
+<div class="main-wrapper bg-dark">
     <!-- HEADER -->
     <header class="header">
-        <div class="container bg-light">
-            <h1 class="m-0">Header Title</h1>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <picture>
+                    <img src="<%= require('./img/logo-img.png') %>" data-src="<%= require('./img/logo-img.png') %>" alt="logo" title="logo">
+                </picture>
+                <span class="logo__text">schemer</span>
+            </a>
+
+            <div class="header-menu">
+                <button class="btn-burger">
+                    <span></span>
+                </button>
+
+                <nav class="site-menu">
+                    <a href="news.html" title="NEWS">news</a>
+                    <a href="#" title="GALLERY">gallery</a>
+                    <a href="#" title="VAALBARA GAMES">vaalbara games</a>
+                    <a href="#" title="BUY NOW">buy now</a>
+                </nav>
+            </div>
         </div>
     </header>
     <!-- HEADER END -->
 
     <!-- CONTENT -->
     <main class="content">
+        <div class="section section-saver">
+            <div class="saver">
+                <div class="saver__logo">
+                    <span class="saver__logo-text">schemer</span>
+                    <picture>
+                        <img src="<%= require('./img/logo-img.png') %>" data-src="<%= require('./img/logo-img.png') %>" alt="main-logo" title="main-logo">
+                    </picture>
+                </div>
 
-        <div class="section">
+                <div class="saver__buttons">
+                    <a href="#" class="btn btn-default">watch trailer</a>
+                    <a href="#" class="btn btn-default">buy now</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="section section-about">
+            <div class="container about-game">
+                <h2 class="about-game__title title title-underline text-center">about game</h2>
+
+                <div class="about-game__description">
+                    <p class="about-game__description-text">In Sekiro: Shadows Die Twice you are the “one-armed wolf”,
+                        a disgraced and disfigured warrior rescued from the brink of death.
+                        Bound to protect a young lord who is the descendant of an ancient bloodline,
+                        you become the target of many vicious enemies, including the dangerous
+                        Ashina clan. When the young lord is captured, nothing will stop
+                        you on a perilous quest to regain your honor, not even death itself.</p>
+
+                    <p class="about-game__description-text">In Sekiro: Shadows Die Twice you are the “one-armed wolf”,
+                        a disgraced and disfigured warrior rescued from the brink of death.
+                        Bound to protect a young lord who is the descendant of an ancient bloodline,
+                        you become the target of many vicious enemies, including the dangerous
+                        Ashina clan. When the young lord is captured, nothing will stop
+                        you on a perilous quest to regain your honor, not even death itself.</p>
+
+                    <p class="about-game__description-text">In Sekiro: Shadows Die Twice you are the “one-armed wolf”,
+                        a disgraced and disfigured warrior rescued from the brink of death.
+                        Bound to protect a young lord who is the descendant of an ancient bloodline,
+                        you become the target of many vicious enemies, including the dangerous
+                        Ashina clan. When the young lord is captured, nothing will stop
+                        you on a perilous quest to regain your honor, not even death itself.</p>
+                </div>
+
+                <div class="about-game__images">
+                    <picture><img src="<%= require('./img/sc_9.jpg') %>" data-src="<%= require('./img/sc_9.jpg') %>" alt="pic9" title="pic9"></picture>
+                    <picture><img src="<%= require('./img/sc_16_2.jpg') %>" data-src="<%= require('./img/sc_16_2.jpg') %>" alt="pic16" title="pic16"></picture>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="section section-main-gallery">
+            <h2 class="title m-0">Gallery</h2>
+
+            <div class="main-slider swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="https://nysurfsoccer.org/wp-content/uploads/2017/03/IMG.png" alt=""></div>
+                    <div class="swiper-slide"><img src="https://nysurfsoccer.org/wp-content/uploads/2017/03/IMG.png" alt=""></div>
+                    <div class="swiper-slide"><img src="https://nysurfsoccer.org/wp-content/uploads/2017/03/IMG.png" alt=""></div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+        <hr>
+        <div class="section section-store">
+            <div class="container store">
+                <div class="preview-game">
+                    <picture>
+                        <img src="<%= require('./img/disc-img.png') %>" data-src="<%= require('./img/disc-img.png') %>" alt="disc-img" title="disc-img">
+                    </picture>
+
+                    <a href="#" class="btn btn-default">WATCH TRAILER</a>
+                </div>
+
+                <div class="subscribe">
+                    <h3 class="subscribe__title title m-0">STAY UP TO DATE AND DO NOT MISS IMPORTANT ANNOUCEMENTS</h3>
+
+                    <form action="" method="" class="subscribe__form">
+                        <label>
+                            <input type="email" name="email" placeholder="Your email" required>
+                        </label>
+
+                        <label>
+                            <input type="text" name="name" placeholder="Your name" required>
+                        </label>
+
+                        <label>
+                            <input type="text" name="platform" placeholder="Your gaming platform" required>
+                        </label>
+
+                        <input type="submit" value="Sign up" class="btn btn-default">
+                    </form>
+
+                    <p class="subscribe__text">Sign up today to receive the latest Schemer news,
+                        updates, behind - the -scenes content, exclusive offers.
+                        Be the first to know about the relese date!</p>
+                </div>
+            </div>
+        </div>
+        <!--<div class="section">
             <div class="container">
                 <h2 class="title m-0">Section Title</h2>
 
                 <div class="main-slider swiper-container">
                     <div class="swiper-wrapper">
-                        <!-- Slides -->
+                        &lt;!&ndash; Slides &ndash;&gt;
                         <div class="swiper-slide"><img src="https://nysurfsoccer.org/wp-content/uploads/2017/03/IMG.png" alt=""></div>
                         <div class="swiper-slide"><img src="https://nysurfsoccer.org/wp-content/uploads/2017/03/IMG.png" alt=""></div>
                         <div class="swiper-slide"><img src="https://nysurfsoccer.org/wp-content/uploads/2017/03/IMG.png" alt=""></div>
@@ -43,22 +165,39 @@
                 </div>
             </div>
         </div>
-
+        <picture>
+            <img src="<%= require('./img/placeholder.png') %>" data-src="<%= require('./img/placeholder.png') %>" alt="placeholder" title="placeholder">
+        </picture>
         <picture>
             <img src="<%= require('./img/loader.svg') %>" data-src="<%= require('./img/loader.svg') %>" alt="loader" title="loader">
         </picture>
-
         <svg>
             <use xlink:href="img/spritemap.svg#sprite-ok"></use>
-        </svg>
-
+        </svg>-->
     </main>
     <!-- CONTENT END -->
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container bg-info">
-            <h3 class="m-0">Footer Title</h3>
+        <div class="container-fluid">
+            <div class="social">
+                <a href="#" target="_blank">FACEBOOK</a>
+                <a href="#" target="_blank">TWITTER</a>
+                <a href="#" target="_blank">INSTAGRAM</a>
+                <a href="#" target="_blank">YOUTUBE</a>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <p class="copyright">© Copyright - Vaalbara Games 2020
+                Privacy Policy</p>
+
+            <div class="footer-info">
+                <picture><img src="<%= require('./img/partner-1.png') %>" data-src="<%= require('./img/partner-1.png') %>" alt="partners" title="partners"></picture>
+                <picture><img src="<%= require('./img/partner-2.png') %>" data-src="<%= require('./img/partner-2.png') %>" alt="rating" title="rating"></picture>
+                <picture><img src="<%= require('./img/company-logo.png') %>" data-src="<%= require('./img/company-logo.png') %>" alt="company" title="company"></picture>
+                <picture><img src="<%= require('./img/flag-ico.png') %>" data-src="<%= require('./img/flag-ico.png') %>" alt="language" title="language"></picture>
+            </div>
         </div>
     </footer>
     <!-- FOOTER END -->

@@ -8,3 +8,15 @@ footer.footer {
 }
 
 .copyright {}
+
+.footer-info picture {
+  &:last-child {
+    img {
+      height: auto;
+    }
+  }
+
+  img {
+    height: 75px;
+  }
+}

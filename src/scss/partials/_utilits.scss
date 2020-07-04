@@ -93,6 +93,48 @@
 .title {
   font-weight: $font-weight-normal;
   font-size: 2.5rem;
+  text-transform: uppercase;
+
+  &-underline {
+    &:after {
+      content: '';
+      width: 74%;
+      height: 2px;
+      background: #ffffff;
+    }
+  }
+}
+
+.btn-default {
+  width: 295px;
+  padding: 14px 6px;
+  border: 5px white solid;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.75);
+
+  &:hover {
+    border-color: $main-second-color;
+    color: $main-second-color;
+    text-shadow: 0 5px 10px rgba(70, 186, 34, 0.75);
+    -webkit-box-shadow: 0 0 5px 0 $main-second-color;
+    -moz-box-shadow: 0 0 5px 0 $main-second-color;
+    box-shadow: 0 0 5px 0 $main-second-color;
+  }
+}
+
+.btn-burger {
+  display: none;
+
+  &:before {
+    content: '';
+  }
+  span {
+
+  }
+  &:after {
+    content: '';
+  }
 }
 
 .font-weight-medium {

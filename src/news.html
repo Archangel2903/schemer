@@ -5,7 +5,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
     <title>Главная</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="style.bc84ce7f2ba37b0e1b14.min.css" rel="stylesheet"></head>
+</head>
 
 <body class="loaded">
 
@@ -16,7 +16,7 @@
         <div class="header-content">
             <a href="index.html" class="logo">
                 <picture>
-                    <img src="img/logo-img.png" data-src="img/logo-img.png" alt="logo" title="logo">
+                    <img src="<%= require('./img/logo-img.png') %>" data-src="<%= require('./img/logo-img.png') %>" alt="logo" title="logo">
                 </picture>
                 <span class="logo__text">schemer</span>
             </a>
@@ -27,7 +27,7 @@
                 </button>
 
                 <nav class="site-menu">
-                    <a href="news.html" title="NEWS">news</a>
+                    <a href="#" title="NEWS">news</a>
                     <a href="#" title="GALLERY">gallery</a>
                     <a href="#" title="VAALBARA GAMES">vaalbara games</a>
                     <a href="#" title="BUY NOW">buy now</a>
@@ -39,22 +39,6 @@
 
     <!-- CONTENT -->
     <main class="content">
-        <div class="section section-saver">
-            <div class="saver">
-                <div class="saver__logo">
-                    <span class="saver__logo-text">schemer</span>
-                    <picture>
-                        <img src="img/logo-img.png" data-src="img/logo-img.png" alt="main-logo" title="main-logo">
-                    </picture>
-                </div>
-
-                <div class="saver__buttons">
-                    <a href="#" class="btn btn-default">watch trailer</a>
-                    <a href="#" class="btn btn-default">buy now</a>
-                </div>
-            </div>
-        </div>
-        <hr>
         <div class="section section-about">
             <div class="container about-game">
                 <h2 class="about-game__title title title-underline text-center">about game</h2>
@@ -83,64 +67,8 @@
                 </div>
 
                 <div class="about-game__images">
-                    <picture><img src="img/sc_9.jpg" data-src="img/sc_9.jpg" alt="pic9" title="pic9"></picture>
-                    <picture><img src="img/sc_16_2.jpg" data-src="img/sc_16_2.jpg" alt="pic16" title="pic16"></picture>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="section section-main-gallery">
-            <h2 class="title m-0">Gallery</h2>
-
-            <div class="main-slider swiper-container">
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide"><img src="https://nysurfsoccer.org/wp-content/uploads/2017/03/IMG.png" alt=""></div>
-                    <div class="swiper-slide"><img src="https://nysurfsoccer.org/wp-content/uploads/2017/03/IMG.png" alt=""></div>
-                    <div class="swiper-slide"><img src="https://nysurfsoccer.org/wp-content/uploads/2017/03/IMG.png" alt=""></div>
-                </div>
-
-                <div class="swiper-pagination"></div>
-
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-                <div class="swiper-scrollbar"></div>
-            </div>
-        </div>
-        <hr>
-        <div class="section section-store">
-            <div class="container store">
-                <div class="preview-game">
-                    <picture>
-                        <img src="img/disc-img.png" data-src="img/disc-img.png" alt="disc-img" title="disc-img">
-                    </picture>
-
-                    <a href="#" class="btn btn-default">WATCH TRAILER</a>
-                </div>
-
-                <div class="subscribe">
-                    <h3 class="subscribe__title title m-0">STAY UP TO DATE AND DO NOT MISS IMPORTANT ANNOUCEMENTS</h3>
-
-                    <form action="" method="" class="subscribe__form">
-                        <label>
-                            <input type="email" name="email" placeholder="Your email" required>
-                        </label>
-
-                        <label>
-                            <input type="text" name="name" placeholder="Your name" required>
-                        </label>
-
-                        <label>
-                            <input type="text" name="platform" placeholder="Your gaming platform" required>
-                        </label>
-
-                        <input type="submit" value="Sign up" class="btn btn-default">
-                    </form>
-
-                    <p class="subscribe__text">Sign up today to receive the latest Schemer news,
-                        updates, behind - the -scenes content, exclusive offers.
-                        Be the first to know about the relese date!</p>
+                    <picture><img src="<%= require('./img/sc_9.jpg') %>" data-src="<%= require('./img/sc_9.jpg') %>" alt="pic9" title="pic9"></picture>
+                    <picture><img src="<%= require('./img/sc_16_2.jpg') %>" data-src="<%= require('./img/sc_16_2.jpg') %>" alt="pic16" title="pic16"></picture>
                 </div>
             </div>
         </div>
@@ -166,10 +94,10 @@
             </div>
         </div>
         <picture>
-            <img src="img/placeholder.png" data-src="img/placeholder.png" alt="placeholder" title="placeholder">
+            <img src="<%= require('./img/placeholder.png') %>" data-src="<%= require('./img/placeholder.png') %>" alt="placeholder" title="placeholder">
         </picture>
         <picture>
-            <img src="img/loader.svg" data-src="img/loader.svg" alt="loader" title="loader">
+            <img src="<%= require('./img/loader.svg') %>" data-src="<%= require('./img/loader.svg') %>" alt="loader" title="loader">
         </picture>
         <svg>
             <use xlink:href="img/spritemap.svg#sprite-ok"></use>
@@ -193,10 +121,10 @@
                 Privacy Policy</p>
 
             <div class="footer-info">
-                <picture><img src="img/partner-1.png" data-src="img/partner-1.png" alt="partners" title="partners"></picture>
-                <picture><img src="img/partner-2.png" data-src="img/partner-2.png" alt="rating" title="rating"></picture>
-                <picture><img src="img/company-logo.png" data-src="img/company-logo.png" alt="company" title="company"></picture>
-                <picture><img src="img/flag-ico.png" data-src="img/flag-ico.png" alt="language" title="language"></picture>
+                <picture><img src="<%= require('./img/partner-1.png') %>" data-src="<%= require('./img/partner-1.png') %>" alt="partners" title="partners"></picture>
+                <picture><img src="<%= require('./img/partner-2.png') %>" data-src="<%= require('./img/partner-2.png') %>" alt="rating" title="rating"></picture>
+                <picture><img src="<%= require('./img/company-logo.png') %>" data-src="<%= require('./img/company-logo.png') %>" alt="company" title="company"></picture>
+                <picture><img src="<%= require('./img/flag-ico.png') %>" data-src="<%= require('./img/flag-ico.png') %>" alt="language" title="language"></picture>
             </div>
         </div>
     </footer>
@@ -206,5 +134,5 @@
 <div class="icon-load"></div>
 <!-- BODY END   -->
 
-<script type="text/javascript" src="bundle.bc84ce7f2ba37b0e1b14.min.js"></script></body>
+</body>
 </html>

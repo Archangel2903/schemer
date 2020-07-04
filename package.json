@@ -12,7 +12,7 @@
     "webpack",
     "project_"
   ],
-  "author": "DzenMan",
+  "author": "DZenMan",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.4.4",

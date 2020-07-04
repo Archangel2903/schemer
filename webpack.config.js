@@ -1,10 +1,15 @@
 const path = require('path');
+const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+/*const pages = fs
+    .readdirSync(path.resolve(__dirname, 'src'))
+    .filter(fileName => fileName.endsWith('.html'));*/
 
 module.exports = {
     entry: {main: "./src/js/index.js"},
@@ -41,7 +46,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(woff2?|eot|ttf)/,
+                test: /\.(woff2?|eot|ttf|svg)/,
                 use: {
                     loader: 'file-loader',
                     options: {
@@ -77,6 +82,17 @@ module.exports = {
             filename: "index.html",
             favicon: "./src/favicon.ico"
         }),
+        new HtmlWebpackPlugin({
+            template: 'src/news.html',
+            filename: "news.html",
+            favicon: "./src/favicon.ico"
+        }),
+        /*...pages.map((page) => new HtmlWebpackPlugin({
+            tamplate: page,
+            filename: page,
+            favicon: './src/favicon.ico',
+            inject: true
+        })),*/
         new SVGSpritemapPlugin("src/img/icons/*.svg", {
             output: {
                 filename: "img/spritemap.svg"
