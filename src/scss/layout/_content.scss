@@ -28,7 +28,7 @@
   }
 
   &-store {
-
+    padding: 160px 0;
   }
 }
 
@@ -180,6 +180,11 @@
 
 .subscribe {
   max-width: 890px;
+
+  &__title {
+    font-size: 1.5em;
+    text-transform: uppercase;
+  }
 
   &__form {
     display: -ms-flexbox;
