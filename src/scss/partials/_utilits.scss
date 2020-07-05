@@ -64,6 +64,7 @@
 
 .section {
   position: relative;
+  overflow: hidden;
 }
 
 .section-bg {
@@ -87,6 +88,12 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    filter: blur(13px);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
   }
 }
 
@@ -98,8 +105,10 @@
   &-underline {
     &:after {
       content: '';
-      width: 74%;
+      display: block;
+      width: 78%;
       height: 2px;
+      margin: 10px auto 0;
       background: #ffffff;
     }
   }

@@ -52,7 +52,7 @@ $(function () {
         scrollbar: {
             el: '.swiper-scrollbar',
         },
-        slidesPerView: 4,
+        slidesPerView: 1,
         spaceBetween: 30,
         centeredSlides: true,
         dynamicBullets: true,

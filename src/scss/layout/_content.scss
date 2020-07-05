@@ -20,15 +20,22 @@
   }
 
   &-about {
-    padding: 50px 0 50px;
+    padding: 70px 0 60px;
   }
 
   &-main-gallery {
+    padding: 135px 0 50px;
 
+    .section-bg {
+      &:after {
+        opacity: .85;
+        background: #1e1f22;
+      }
+    }
   }
 
   &-store {
-    padding: 160px 0;
+    padding: 215px 0 165px;
   }
 }
 
@@ -114,11 +121,18 @@
 
   &__title {
     width: 100%;
+    margin-bottom: 50px;
     font-size: 1.5em;
   }
 
   &__description {
     max-width: 640px;
+
+    &-text {
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+    }
   }
 
   &__images {
@@ -126,12 +140,29 @@
 
     img {
       width: 100%;
+      -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.76);
+      -moz-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.76);
+      box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.76);
+    }
+
+    picture:not(:last-child) img {
+      margin-bottom: 50px;
     }
   }
 }
 
-.gallery {
+.main-gallery {
+  &__title {
+    position: relative;
+    margin-bottom: -70px;
+    font-size: 2em;
+    text-align: center;
+    z-index: 5;
+  }
 
+  &__slider {
+
+  }
 }
 
 .store {
@@ -153,7 +184,7 @@
   -webkit-align-items: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  padding: 0 70px;
+  padding: 0 105px;
 }
 
 .preview-game {
@@ -182,7 +213,9 @@
   max-width: 890px;
 
   &__title {
+    margin-bottom: 90px;
     font-size: 1.5em;
+    text-align: center;
     text-transform: uppercase;
   }
 
@@ -205,5 +238,35 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+
+    label {
+      width: 100%;
+      max-width: 645px;
+      margin: 0;
+      text-align: center;
+
+      &:not(:last-of-type) {
+        margin-bottom: 26px;
+      }
+    }
+
+    &-input {
+      width: 100%;
+      height: 47px;
+      border: 2px solid #ffffff;
+      -webkit-border-radius: 9px;
+      -moz-border-radius: 9px;
+      border-radius: 9px;
+      color: $text-color;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    &-submit {
+      margin-top: 55px;
+      padding: 4px 6px 12px;
+      font-size: 1.5em;
+      text-transform: none;
+    }
   }
 }

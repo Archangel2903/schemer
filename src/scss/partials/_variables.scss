@@ -7,7 +7,7 @@ $main-third-color: blue;
 $title-color: #111;
 $text-color: #fff;
 $link-hover-color: #ba2a22;
-$input-placeholder-color: #aaa;
+$input-placeholder-color: $text-color;
 
 // fonts
 $font-family-base: 'Oswald ExtraLight', sans-serif;

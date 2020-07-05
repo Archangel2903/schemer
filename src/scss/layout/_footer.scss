@@ -5,6 +5,13 @@ footer.footer {
   order: 3;
   -webkit-order: 3;
   position: relative;
+  overflow: hidden;
+
+  .section-bg {
+    &__img {
+      filter: blur(0px);
+    }
+  }
 }
 
 .social {
@@ -27,6 +34,14 @@ footer.footer {
   -ms-flex-align: center;
   align-items: center;
   padding: 20px 0;
+  border: 1px solid #969696;
+  border-left: none;
+  border-right: none;
+  background: #000000;
+  background: -moz-linear-gradient(left, #000000 0%, #242424 50%, #000000 100%);
+  background: -webkit-linear-gradient(left, #000000 0%,#242424 50%,#000000 100%);
+  background: linear-gradient(to right, #000000 0%,#242424 50%,#000000 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=1 );
 }
 
 .footer-content {
