@@ -87,6 +87,16 @@ module.exports = {
             filename: "news.html",
             favicon: "./src/favicon.ico"
         }),
+        new HtmlWebpackPlugin({
+            template: 'src/gallery.html',
+            filename: "gallery.html",
+            favicon: "./src/favicon.ico"
+        }),
+        new HtmlWebpackPlugin({
+            template: 'src/info.html',
+            filename: "info.html",
+            favicon: "./src/favicon.ico"
+        }),
         /*...pages.map((page) => new HtmlWebpackPlugin({
             tamplate: page,
             filename: page,
