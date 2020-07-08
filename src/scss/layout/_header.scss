@@ -48,7 +48,7 @@ header.header {
   }
 
   &__text {
-    letter-spacing: 13px;
+    letter-spacing: 12px;
   }
 }
 
@@ -71,6 +71,12 @@ header.header {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+
+  &.active {
+    top: 100%;
+    opacity: 1;
+    visibility: visible;
+  }
 
   a {
     text-transform: uppercase;

@@ -1,5 +1,4 @@
 const path = require('path');
-const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
@@ -27,7 +26,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.scss$/,
+                test: /\.(scss|sass)$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
@@ -35,8 +34,8 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|jpg|svg|gif|ico|webp)$/,
-                exclude: /icons/,
+                test: /\.(png|jpe?g|svg|gif|ico|webp)$/,
+                exclude: /icons|fonts/,
                 use: {
                     loader: "file-loader",
                     options: {

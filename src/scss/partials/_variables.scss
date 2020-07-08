@@ -25,7 +25,11 @@ $line-height-base: 1.25;
 // behavior
 $transition-base: all .3s ease 0s;
 
-//Bootstrap var
+// Plugins
+$lg-path-fonts: '../../node_modules/lightgallery/src/fonts';
+$lg-path-images: '../../node_modules/lightgallery/src/img';
+
+// Bootstrap var
 $enable-shadows: true;
 $body-color: $text-color;
 
@@ -39,7 +43,7 @@ $grid-breakpoints: (
 
 $container-max-widths: (
         sm: 540px,
-        md: 720px,
+        md: 767px,
         lg: 1340px,
         xl: 1540px
 );
