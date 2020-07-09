@@ -25,7 +25,26 @@
 }
 
 // max-width
-@include media-breakpoint-down(lg) {}
+@include media-breakpoint-down(lg) {
+  .news {
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+
+    &__slide {
+      margin-top: 84px;
+    }
+  }
+
+  .info {
+    &__description {
+      padding: 70px 100px;
+    }
+  }
+}
 
 @include media-breakpoint-down(md) {
   .about-game {
@@ -55,6 +74,12 @@
 }
 
 @media screen and (max-width: 996px) {
+  .section {
+    &-news {
+      padding: 80px 0;
+    }
+  }
+
   .site-menu {
     border-left: 3px solid #fff;
     padding-left: 10px;
@@ -112,6 +137,41 @@
     }
   }
 
+  .news {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    &__slide {
+      order: 1;
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__description-wrap {
+      order: 0;
+      width: 100%;
+      max-width: none;
+      margin-bottom: 36px;
+    }
+  }
+
+  .info {
+    &__description {
+      padding: 1em 2em;
+    }
+  }
+
+  .gallery {
+    &__grid {
+      a {
+        max-width: 315px;
+      }
+    }
+  }
+
   .social {
     img {
       width: 30px;
@@ -154,6 +214,10 @@
     }
 
     &-store {
+      padding: 80px 0;
+    }
+
+    &-info {
       padding: 80px 0;
     }
   }
@@ -262,6 +326,17 @@
     }
   }
 
+  .info {
+    &__logo {
+      img {
+        height: 280px;
+      }
+    }
+    &__description-text {
+      font-size: 1em;
+    }
+  }
+
   .social {
     a {
       font-size: 0;
@@ -321,6 +396,29 @@
   .main-gallery {
     &__title {
       margin-bottom: -20px;
+    }
+  }
+
+  .news {
+    &__description-wrap {
+
+    }
+    &__description {
+      padding: 10px 20px 30px;
+    }
+    &__date {
+      margin-bottom: 10px;
+    }
+    &__text {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .info {
+    &__description {
+      padding: 1em .75em;
     }
   }
 

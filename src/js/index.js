@@ -5,9 +5,9 @@ import 'bootstrap';
 import 'popper.js';
 import Swiper from 'swiper';
 import 'lightgallery';
-
-var jQueryBridget = require('jquery-bridget');
-var Isotope = require('isotope-layout');
+const jQueryBridget = require('jquery-bridget');
+const Isotope = require('isotope-layout');
+const imagesLoaded = require('imagesloaded');
 jQueryBridget('isotope', Isotope, $);
 
 $(window).on('load', function () {
@@ -66,7 +66,7 @@ $(function () {
         dynamicBullets: true,
     });
 
-    slider.init();
+    if (slider.length) slider.init();
 
     $(".lightgallery").lightGallery({
         download: false,
@@ -76,9 +76,13 @@ $(function () {
         showThumbByDefault: false
     });
 
-    $(document).on('click', '.btn-burger', function (e) {
+    $('.btn-burger').on('click', function (e) {
         $(this).toggleClass('active');
         $(this).next('.site-menu').toggleClass('active');
+        e.stopPropagation();
+    });
+
+    $('.site-menu, .site-menu a').on('click', function (e) {
         e.stopPropagation();
     });
 
@@ -89,38 +93,40 @@ $(function () {
 });
 
 $(function () {
-// init Isotope
-    var $grid = $('.gallery__grid').isotope({
-        itemSelector: '.element-item',
-        layoutMode: 'fitRows'
-    });
-// filter functions
-    var filterFns = {
-        // show if number is greater than 50
-        numberGreaterThan50: function() {
-            var number = $(this).find('.number').text();
-            return parseInt( number, 10 ) > 50;
-        },
-        // show if name ends with -ium
-        ium: function() {
-            var name = $(this).find('.name').text();
-            return name.match( /ium$/ );
-        }
-    };
-// bind filter button click
-    $('.filters-button-group').on( 'click', 'button', function() {
-        var filterValue = $( this ).attr('data-filter');
-        // use filterFn if matches value
-        filterValue = filterFns[ filterValue ] || filterValue;
-        $grid.isotope({ filter: filterValue });
-    });
-// change is-checked class on buttons
-    $('.button-group').each( function( i, buttonGroup ) {
-        var $buttonGroup = $( buttonGroup );
-        $buttonGroup.on( 'click', 'button', function() {
-            $buttonGroup.find('.is-checked').removeClass('is-checked');
-            $( this ).addClass('is-checked');
+    imagesLoaded.makeJQueryPlugin($);
+
+    /* Gallery Filter */
+    var galleryFilter = $('.gallery__filter');
+    var galleryGrid = $('.lightgallery');
+
+    galleryGrid.imagesLoaded(function() {
+        /*-- Filter List --*/
+        galleryFilter.on('click', 'button', function() {
+            galleryFilter.find('button').removeClass('is-checked');
+            $(this).addClass('is-checked');
+            var filterValue = $(this).attr('data-filter');
+
+            galleryGrid.isotope({
+                filter: filterValue
+            });
+        });
+
+        galleryGrid.isotope();
+
+        galleryFilter.on( 'click', 'button', function() {
+            var filterValue = $(this).attr('data-filter');
+            galleryGrid.isotope({
+                filter: filterValue,
+                itemSelector: '.element-item',
+                percentPosition: true,
+                masonry: {
+                    columnWidth: '.element-item'
+                }
+            });
         });
     });
-
 });
+
+setTimeout(function () {
+    window.dispatchEvent(new Event('resize'));
+}, 1000);
