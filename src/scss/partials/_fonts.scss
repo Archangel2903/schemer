@@ -1,7 +1,7 @@
 $fonts-path: '../fonts/';
 
 @font-face {
-  font-family:'Helios Regular';
+  font-family: 'Helios Regular';
   src: url('#{$fonts-path}Helios Regular.eot');
   src: url('#{$fonts-path}Helios Regular.eot?#iefix') format('embedded-opentype'),
   url('#{$fonts-path}Helios Regular.woff2') format('woff2'),
@@ -15,27 +15,17 @@ $fonts-path: '../fonts/';
 }
 
 @font-face {
-  font-family: 'Oswald ExtraLight';
-  src: url('#{$fonts-path}Oswald ExtraLight.eot');
-  src: url('#{$fonts-path}Oswald ExtraLight.eot?#iefix') format('embedded-opentype'),
-       url('#{$fonts-path}Oswald ExtraLight.woff2') format('woff2'),
-       url('#{$fonts-path}Oswald ExtraLight.woff') format('woff'),
-       url('#{$fonts-path}Oswald ExtraLight.ttf') format('truetype'),
-       url('#{$fonts-path}Oswald ExtraLight.svg#Oswald ExtraLight') format('svg');
-  font-weight: 300;
+  font-family: 'Pirulen';
+  src: url('#{$fonts-path}Pirulen.eot');
+  src: url('#{$fonts-path}Pirulen.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Pirulen.woff2') format('woff2'),
+  url('#{$fonts-path}Pirulen.woff') format('woff'),
+  url('#{$fonts-path}Pirulen.ttf') format('truetype'),
+  url('#{$fonts-path}Pirulen.svg#Pirulen') format('svg');
+  font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  unicode-range: U+0020-FB02;
-}
-
-@font-face {
-  font-family: 'PirulenRg-Regular';
-  src: url("#{$fonts-path}pirulen_rg.eot?") format("eot"),
-       url("#{$fonts-path}pirulen_rg.woff") format("woff"),
-       url("#{$fonts-path}pirulen_rg.ttf") format("truetype"),
-       url("#{$fonts-path}pirulen_rg.svg#PirulenRg-Regular") format("svg");
-  font-weight: normal;
-  font-style: normal;
+  unicode-range: U+0020-02DC;
 }
 
 @font-face {

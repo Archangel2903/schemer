@@ -5,6 +5,7 @@ import 'bootstrap';
 import 'popper.js';
 import Swiper from 'swiper';
 import 'lightgallery';
+
 const jQueryBridget = require('jquery-bridget');
 const Isotope = require('isotope-layout');
 const imagesLoaded = require('imagesloaded');
@@ -90,6 +91,18 @@ $(function () {
         $('.btn-burger').removeClass('active');
         $('.site-menu').removeClass('active');
     });
+
+    const trailer_modal = $('#trailer-modal');
+    trailer_modal.on('hide.bs.modal', function (e) {
+        let source = $(this).find('iframe').attr('src');
+        $(this).find('iframe').attr('src', ' ');
+        $(this).find('iframe').data('source', source);
+    });
+
+    trailer_modal.on('show.bs.modal', function (e) {
+        let source = $(this).find('iframe').data('source');
+        $(this).find('iframe').attr('src', source);
+    });
 });
 
 $(function () {
@@ -99,9 +112,9 @@ $(function () {
     var galleryFilter = $('.gallery__filter');
     var galleryGrid = $('.lightgallery');
 
-    galleryGrid.imagesLoaded().done(function() {
+    galleryGrid.imagesLoaded().done(function () {
         /*-- Filter List --*/
-        galleryFilter.on('click', 'button', function() {
+        galleryFilter.on('click', 'button', function () {
             galleryFilter.find('button').removeClass('is-checked');
             $(this).addClass('is-checked');
             var filterValue = $(this).attr('data-filter');
