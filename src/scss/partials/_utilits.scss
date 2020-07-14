@@ -124,12 +124,12 @@
   text-shadow: 0 5px 10px rgba(0, 0, 0, 0.75);
 
   &:hover {
-    border-color: $main-second-color;
-    color: $main-second-color;
-    text-shadow: 0 5px 10px rgba(70, 186, 34, 0.75);
-    -webkit-box-shadow: 0 0 5px 0 $main-second-color;
-    -moz-box-shadow: 0 0 5px 0 $main-second-color;
-    box-shadow: 0 0 5px 0 $main-second-color;
+    border-color: $main-first-color;
+    color: $main-first-color;
+    text-shadow: 0 5px 10px $main-first-color;
+    -webkit-box-shadow: 0 0 5px 0 $main-first-color;
+    -moz-box-shadow: 0 0 5px 0 $main-first-color;
+    box-shadow: 0 0 5px 0 $main-first-color;
   }
 }
 
@@ -238,7 +238,7 @@
 
 .modal {
   .modal-dialog {
-    max-width: 800px;
+    //max-width: 800px;
     width: max-content;
   }
 

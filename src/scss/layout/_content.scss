@@ -142,8 +142,10 @@
   &__description {
     width: 50%;
     max-width: 640px;
+    padding-right: 40px;
 
     &-text {
+      text-align: justify;
       &:not(:last-child) {
         margin-bottom: 50px;
       }
