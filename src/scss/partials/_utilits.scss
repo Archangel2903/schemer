@@ -216,6 +216,10 @@
     outline: none !important;
     color: #ffffff;
     background: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
   &-next {
     @extend .swiper-button-prev;
