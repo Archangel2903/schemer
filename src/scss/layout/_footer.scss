@@ -79,9 +79,9 @@ footer.footer {
 .copyright {
   position: relative;
   margin: 22px 0 0;
-  padding-left: 1em;
+  padding-left: 1.5em;
   color: #c8c2bc;
-  font-size: 1em;
+  font-size: 1.5em;
   text-align: left;
   white-space: pre-line;
 
@@ -91,6 +91,7 @@ footer.footer {
     left: 0;
     font-family: $font-family-unique;
     font-size: 1.25em;
+    line-height: 1;
     vertical-align: middle;
   }
 }

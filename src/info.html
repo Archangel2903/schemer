@@ -14,33 +14,7 @@
     <!-- HEADER -->
     <header class="header">
         <div class="header-content">
-            <a href="index.html" class="logo">
-                <picture>
-                    <img src="<%= require('./img/logo-img.png') %>" data-src="<%= require('./img/logo-img.png') %>" alt="logo" title="logo">
-                </picture>
-                <span class="logo__text">schemer</span>
-            </a>
-
-            <div class="header-menu">
-                <button class="btn-burger">
-                    <span></span>
-                </button>
-
-                <nav class="site-menu">
-                    <a href="news.html" title="NEWS">news</a>
-                    <a href="gallery.html" title="GALLERY">gallery</a>
-                    <a href="info.html" title="VAALBARA GAMES">vaalbara games</a>
-                    <a href="index.html#buy-now" title="BUY NOW">buy now</a>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <!-- HEADER END -->
-
-    <!-- CONTENT -->
-    <header class="header">
-        <div class="header-content">
-            <a href="index.html" class="logo">
+            <a href="/" class="logo">
                 <picture>
                     <img src="<%= require('./img/logo-img.png') %>" data-src="<%= require('./img/logo-img.png') %>" alt="logo" title="logo">
                 </picture>
@@ -61,6 +35,29 @@
             </div>
         </div>
     </header>
+    <!-- HEADER END -->
+
+    <!-- CONTENT -->
+    <main class="content">
+        <div class="section section-info">
+            <div class="container-fluid px-md-5 info">
+                <picture class="info__logo">
+                    <img src="<%= require('./img/company-logo.png') %>" data-src="<%= require('./img/company-logo.png') %>" alt="company logo" title="company logo">
+                </picture>
+
+                <div class="info__description">
+                    <p class="info__description-text">The company wat set up in 2018 by people with experience in entertainment. Our goal is to show that even a small team with passion and access to professional tools can create a  high-quality game
+                    </p>
+                </div>
+            </div>
+
+            <div class="section-bg">
+                <picture>
+                    <img src="<%= require('./img/sc_1.jpg') %>" data-src="<%= require('./img/sc_1.jpg') %>" class="section-bg__img" alt="background-section" title="background-section">
+                </picture>
+            </div>
+        </div>
+    </main>
     <!-- CONTENT END -->
 
     <!-- FOOTER -->
