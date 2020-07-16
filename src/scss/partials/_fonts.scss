@@ -1,31 +1,31 @@
 $fonts-path: '../fonts/';
 
 @font-face {
-  font-family: 'Zephyr';
-  src: url('#{$fonts-path}Zephyr.eot');
-  src: url('#{$fonts-path}Zephyr.eot?#iefix') format('embedded-opentype'),
-  url('#{$fonts-path}Zephyr.woff2') format('woff2'),
-  url('#{$fonts-path}Zephyr.woff') format('woff'),
-  url('#{$fonts-path}Zephyr.ttf') format('truetype'),
-  url('#{$fonts-path}Zephyr.svg#Zephyr') format('svg');
-  font-weight: 400;
+  font-family:'Oswald ExtraLight';
+  src: url('#{$fonts-path}Oswald ExtraLight.eot');
+  src: url('#{$fonts-path}Oswald ExtraLight.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Oswald ExtraLight.woff2') format('woff2'),
+  url('#{$fonts-path}Oswald ExtraLight.woff') format('woff'),
+  url('#{$fonts-path}Oswald ExtraLight.ttf') format('truetype'),
+  url('#{$fonts-path}Oswald ExtraLight.svg#Oswald ExtraLight') format('svg');
+  font-weight: 275;
   font-style: normal;
   font-stretch: normal;
-  unicode-range: U+0020-007A;
+  unicode-range: U+0020-2074;
 }
 
 @font-face {
-  font-family: 'Helios Regular';
-  src: url('#{$fonts-path}Helios Regular.eot');
-  src: url('#{$fonts-path}Helios Regular.eot?#iefix') format('embedded-opentype'),
-  url('#{$fonts-path}Helios Regular.woff2') format('woff2'),
-  url('#{$fonts-path}Helios Regular.woff') format('woff'),
-  url('#{$fonts-path}Helios Regular.ttf') format('truetype'),
-  url('#{$fonts-path}Helios Regular.svg#Helios Regular') format('svg');
+  font-family:'g';
+  src: url('#{$fonts-path}g Regular.eot');
+  src: url('#{$fonts-path}g Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}g Regular.woff2') format('woff2'),
+  url('#{$fonts-path}g Regular.woff') format('woff'),
+  url('#{$fonts-path}g Regular.ttf') format('truetype'),
+  url('#{$fonts-path}g Regular.svg#g Regular') format('svg');
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  unicode-range: U+0020-007A;
+  unicode-range: U+0020-2212;
 }
 
 @font-face {
